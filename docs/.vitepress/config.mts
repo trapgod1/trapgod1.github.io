@@ -15,16 +15,16 @@ export default defineConfig({
       {
         text: 'Guides',
         items: [
-          { text: 'Website Is Still Work in progess', link: '' },
+          { text: 'Guides are Work in Progess more to come soonTM', link: '' },
           {text: '------------------'},
           {text: 'Firefox Setup', link:'/firefox-setup.md'},
+          {text: 'Twitch Adblock', link:'/twitchadblock.md'},
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-      { icon: 'discord', link: 'https://discord.com' }
+      { icon: 'github', link: 'https://github.com/trapgod1/trapgod1.github.io' },
     ]
   }
 })
