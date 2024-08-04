@@ -1,7 +1,17 @@
 {
+  "devDependencies": {
+    "@lando/vitepress-theme-default-plus": "^1.0.2",
+    "vitepress": "^1.2.2",
+    "vitepress-plugin-tabs": "^0.5.0"
+  },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@orestbida/iframemanager": "^1.2.5",
+    "vanilla-cookieconsent": "^3.0.1",
+    "vue": "^3.4.23"
   }
 }
