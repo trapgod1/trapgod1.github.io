@@ -90,7 +90,7 @@ It was broken for a while due to Twitch's integrity check, rolled out then rever
 ### Luminous TTV - [Source](https://github.com/AlyoshaVasilieva/luminous-ttv)
 A [Rust](https://www.rust-lang.org) server to retrieve and relay a playlist for Twitch livestreams/VODs.
 
-By running this server, and using [a browser extension][ext] to relay certain requests to it, Twitch will not
+By running this server, and using [a browser extension](https://github.com/AlyoshaVasilieva/luminous-ttv-ext) to relay certain requests to it, Twitch will not
 display any ads.
 
 1. Download the [Server](https://github.com/AlyoshaVasilieva/luminous-ttv/releases/latest)
