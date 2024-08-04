@@ -24,7 +24,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/trapgod1/trapgod1.github.io' },
+      { icon: 'github', link: 'https://github.com/trapgod1/trapgod1.github.io/tree/guide' },
     ]
   }
 })
