@@ -1,8 +1,8 @@
 # Twitch Adblock Methods
 
-:::danger **DO NOT COMBINE MULTIPLE ADBLOCKING METHODS**
+::: danger **DO NOT COMBINE MULTIPLE ADBLOCKING METHODS**
 :::
-:::tip Banner and Pop-up Ads will be blocked by **[uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)**
+:::tip Banner and Pop-up Ads will be blocked by **[uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)** - **[Setup Guide](/uBlockOrigin.md)**
 :::
 
 ## Client Side (Easy)

@@ -5,9 +5,9 @@ layout: home
 hero:
   name: "A Guide"
   text: "A Website With Guides"
-  tagline: Most links will be for Firefox since Chrome will be dropping support for mv2
+  tagline:
 
 features:
   - title: Guides
     details: Takes You to the Guides
-    link: /firefox-setup
+    link: /welcome.md
