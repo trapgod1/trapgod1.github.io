@@ -1,31 +1,52 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-  title: "A Guide",
-  description: "A Website With Guides",
+  title: "The Archive",
+  description: 'A site will curated guides for Tools and Software',
+  appearance: 'dark',
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guides', link: '/welcome.md' }
+      { text: 'Guides', link: '/welcome' },
     ],
 
-    sidebar: [
-      {
-        text: 'Guides',
-        items: [
-          { text: 'Guides are Work in Progess more to come soonTM', link: '' },
-          {text: '------------------'},
-          {text: 'Firefox Setup', link:'/firefoxsetup.md'},
-          {text: 'Twitch Adblock', link:'/twitchadblock.md'},
-          {text: 'uBlock Orgin Setup', link:'/uBlockOrigin.md'},
-          {text: 'Windows & Office Activation', link:'windowsandofficeactivation.md'},
-          {text: 'So, you want to debloat Windows?', link:'/debloatwindows.md'},
-        ]
-      }
-    ],
-
+    sidebar: {
+      '/': [
+        {
+          text: 'Guides',
+          items: [
+            { text: 'Welcome', link: '/welcome' },
+            {
+              text: 'Adblocking',
+              collapsed: false,
+              items: [
+                { text: 'uBlock Origin', link: '/adblocking/ublockorigin' },
+                { text: 'Twitch Adblocking', link: '/adblocking/twitchadblock' },
+                { text: 'DNS Adblock', link: '' },
+              ]
+            },
+            {
+              text: 'Windows',
+              collapsed: false,
+              items: [
+                { text: 'Windows & Office Activation', link: '/windows/windowsandofficeactivation' },
+                { text: 'Windows Debloat', link: '/windows/debloatwindows' },
+              ]
+            },
+            { text: 'Firefox Setup', link: '/firefoxsetup' },
+          ],
+        },
+      ],
+    },
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024-present Trap',
+    },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/trapgod1/trapgod1.github.io/tree/guide' },
-    ]
+      { icon: 'github', link: 'https://github.com/trapgod1/trapgod1.github.io' }
+    ],
   }
-})
+});

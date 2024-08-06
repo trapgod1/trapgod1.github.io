@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "A Guide"
-  text: "A Website With Guides"
-  tagline:
+  name: "The Archive"
+  text: ""
+  tagline: A site will curated guides for Tools and Software
 
 features:
   - title: Guides
