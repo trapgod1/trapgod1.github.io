@@ -25,7 +25,7 @@ export default defineConfig({
               items: [
                 { text: 'uBlock Origin', link: '/adblocking/ublockorigin' },
                 { text: 'Twitch Adblocking', link: '/adblocking/twitchadblock' },
-                { text: 'DNS Adblock', link: '' },
+                { text: 'DNS Adblock', link: '/adblocking/dns' },
               ]
             },
             {
