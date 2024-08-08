@@ -36,6 +36,13 @@ export default defineConfig({
                 { text: 'Windows Debloat', link: '/windows/debloatwindows' },
               ]
             },
+            {
+              text: 'Software',
+              collapsed: false,
+              items: [
+                { text: 'Download Mangers', link: '/software/downloadmanager' },
+              ]
+            },
             { text: 'Firefox Setup', link: '/firefoxsetup' },
           ],
         },
