@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~/_about.lua</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nvim-container">
+    <div class="title-bar">
+      <div class="title-bar-left">
+        <div class="window-controls">
+          <div class="window-control control-close"></div>
+          <div class="window-control control-minimize"></div>
+          <div class="window-control control-maximize"></div>
+        </div>
+        <span>~/.config/nvim/lua/about.lua</span>
+      </div>
+    </div>
+
+    <div class="main-area">
+      <main class="editor-area">
+        <div class="tab-bar">
+          <div class="tab active" data-section="about" data-num="1">
+            <span class="number">1</span>
+            <span>about.lua</span>
+            <span class="close">✕</span>
+          </div>
+          <div class="tab" data-section="skills" data-num="2">
+            <span class="number">2</span>
+            <span>skills.lua</span>
+            <span class="close">✕</span>
+          </div>
+          <div class="tab" data-section="projects" data-num="3">
+            <span class="number">3</span>
+            <span>projects.lua</span>
+            <span class="close">✕</span>
+          </div>
+          <div class="tab" data-section="contact" data-num="4">
+            <span class="number">4</span>
+            <span>contact.lua</span>
+            <span class="close">✕</span>
+          </div>
+          <div class="tab" data-section="homelab" data-num="5">
+            <span class="number">5</span>
+            <span>homelab.lua</span>
+            <span class="close">✕</span>
+          </div>
+        </div>
+
+        <div class="editor" id="editor">
+          <div class="gutter" id="gutter"></div>
+          <div class="editor-content" id="editor-content"></div>
+        </div>
+      </main>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-left">
+        <div class="status-item">
+          <span>Normal</span>
+        </div>
+        <div class="status-item">
+          <span>utf-8</span>
+        </div>
+      </div>
+      <div class="status-right">
+        <div class="status-item">
+          <span>Tab 1/5</span>
+        </div>
+        <div class="status-item">
+          <span>Ln 1, Col 1</span>
+        </div>
+        <div class="status-item">
+          <span>100%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="command-bar" id="command-bar">
+    <span class="prompt">:</span>
+    <input type="text" id="command-input" placeholder="command...">
+  </div>
+
+  <div class="command-output" id="command-output"></div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="vim-help" id="vim-help">
+    <h2>Keyboard Shortcuts</h2>
+    <table>
+      <tr><td>1-5</td><td>Switch tabs</td></tr>
+      <tr><td>j/k</td><td>Navigate down/up</td></tr>
+      <tr><td>gg</td><td>Go to top</td></tr>
+      <tr><td>G</td><td>Go to bottom</td></tr>
+      <tr><td>:</td><td>Open command bar</td></tr>
+      <tr><td>?</td><td>Show help</td></tr>
+      <tr><td>Esc</td><td>Close/Exit</td></tr>
+      <tr><td colspan="2" style="border-top: 1px solid var(--border); padding-top: 8px;">Contact (in contact tab):</td></tr>
+      <tr><td>gx</td><td>Twitter/X</td></tr>
+      <tr><td>gd</td><td>Discord</td></tr>
+      <tr><td>gh</td><td>GitHub</td></tr>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

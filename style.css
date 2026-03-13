@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #1a1b26;
+  --bg-darker: #16161e;
+  --bg-light: #24283b;
+  --fg: #c0caf5;
+  --fg-dim: #565f89;
+  --accent: #7aa2f7;
+  --accent2: #bb9af7;
+  --string: #9ece6a;
+  --keyword: #ff9e64;
+  --function: #7aa2f7;
+  --comment: #565f89;
+  --number: #ff9e64;
+  --operator: #89ddff;
+  --method: #c0caf5;
+  --field: #7dcfff;
+  --border: #414868;
+  --cursor: #c0caf5;
+}
+
+body {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  background: var(--bg-darker);
+  color: var(--fg);
+  height: 100vh;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.nvim-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.title-bar {
+  background: var(--bg-darker);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.title-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-bar-left span {
+  color: var(--fg-dim);
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.window-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.control-close { background: #ff5f56; }
+.control-minimize { background: #ffbd2e; }
+.control-maximize { background: #27c93f; }
+
+.main-area {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+.tab-bar {
+  display: flex;
+  background: var(--bg-darker);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.tab-bar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: var(--bg-darker);
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  min-width: max-content;
+  transition: background 0.1s;
+}
+
+.tab:hover {
+  background: var(--bg-light);
+}
+
+.tab.active {
+  background: var(--bg-dark);
+  color: var(--accent);
+}
+
+.tab .number {
+  color: var(--fg-dim);
+  font-size: 11px;
+  margin-right: 4px;
+}
+
+.tab .close {
+  opacity: 0;
+  font-size: 14px;
+  transition: opacity 0.1s;
+}
+
+.tab:hover .close,
+.tab.active .close {
+  opacity: 1;
+}
+
+.tab .close:hover {
+  color: var(--error);
+}
+
+.editor {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 20px 20px 60px;
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+.editor::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+
+.gutter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 45px;
+  background: var(--bg-dark);
+  border-right: 1px solid var(--border);
+  padding: 20px 8px 20px 0;
+  text-align: right;
+  user-select: none;
+}
+
+.gutter-line {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--fg-dim);
+  height: 22.4px;
+}
+
+.gutter-line.current {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.gutter-line.relative {
+  color: var(--fg-dim);
+  opacity: 0.6;
+}
+
+.editor-line {
+  display: block;
+  min-height: 22.4px;
+  height: 22.4px;
+  white-space: pre;
+}
+
+.cursor-line {
+  background: rgba(122, 162, 247, 0.12);
+}
+
+.keybind-waiting {
+  background: rgba(187, 154, 247, 0.2);
+}
+
+.keybind-active {
+  background: rgba(122, 162, 247, 0.4);
+}
+
+.syntax-keyword { color: var(--keyword); font-family: inherit; }
+.syntax-string { color: var(--string); font-family: inherit; }
+.syntax-function { color: var(--function); font-family: inherit; }
+.syntax-comment { color: var(--comment); font-style: italic; font-family: inherit; }
+.syntax-number { color: var(--number); font-family: inherit; }
+.syntax-type { color: var(--accent2); font-family: inherit; }
+.syntax-operator { color: var(--operator); font-family: inherit; }
+.syntax-method { color: var(--method); font-family: inherit; }
+.syntax-field { color: var(--field); font-family: inherit; }
+.syntax-boolean { color: var(--keyword); font-family: inherit; }
+.syntax-builtin { color: var(--accent2); font-family: inherit; }
+.syntax-keybind { color: var(--accent); font-weight: 600; font-family: inherit; }
+
+.status-bar {
+  background: var(--bg-darker);
+  border-top: 1px solid var(--border);
+  padding: 4px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--fg-dim);
+}
+
+.status-left, .status-right {
+  display: flex;
+  gap: 20px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.command-bar {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 16px;
+  display: none;
+  gap: 12px;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.command-bar.visible {
+  display: flex;
+}
+
+.command-bar .prompt {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.command-bar input {
+  background: transparent;
+  border: none;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  width: 300px;
+}
+
+.command-output {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: none;
+  max-width: 500px;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.command-output.visible {
+  display: block;
+}
+
+.vim-help {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  display: none;
+  z-index: 200;
+  min-width: 300px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.vim-help.visible {
+  display: block;
+}
+
+.vim-help h2 {
+  color: var(--accent);
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.vim-help table {
+  width: 100%;
+}
+
+.vim-help td {
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.vim-help td:first-child {
+  color: var(--accent2);
+  width: 80px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 150;
+}
+
+.overlay.visible {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .editor {
+    padding: 12px 12px 12px 50px;
+  }
+  
+  .gutter {
+    width: 40px;
+    padding: 12px 6px 12px 0;
+  }
+}
