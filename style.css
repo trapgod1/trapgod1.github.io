@@ -228,6 +228,17 @@ body {
 .syntax-builtin { color: var(--accent2); font-family: inherit; }
 .syntax-keybind { color: var(--accent); font-weight: 600; font-family: inherit; }
 
+.contact-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--accent2);
+  text-decoration: underline;
+}
+
 .status-bar {
   background: var(--bg-darker);
   border-top: 1px solid var(--border);
@@ -355,12 +366,79 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 12px;
+    overflow-x: hidden;
+  }
+
   .editor {
     padding: 12px 12px 12px 50px;
+    overflow-x: hidden;
   }
   
   .gutter {
-    width: 40px;
-    padding: 12px 6px 12px 0;
+    width: 35px;
+    padding: 12px 4px 12px 0;
+  }
+
+  .gutter-line {
+    font-size: 10px;
+  }
+
+  .editor-line {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: auto;
+    min-height: 22.4px;
+  }
+
+  .tab-bar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .title-bar-left span {
+    font-size: 11px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .status-bar {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .status-left, .status-right {
+    gap: 10px;
+  }
+
+  .command-bar {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .command-bar input {
+    width: 100%;
+  }
+
+  .command-output {
+    width: 90%;
+    max-width: 350px;
+    font-size: 12px;
+  }
+
+  .vim-help {
+    width: 90%;
+    max-width: 320px;
+    padding: 16px;
+    font-size: 12px;
   }
 }

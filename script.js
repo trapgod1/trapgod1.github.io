@@ -60,7 +60,7 @@ const portfolioData = {
 <div class="editor-line">    <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Hackathon"</span>,</div>
 <div class="editor-line">    <span class="syntax-field">description</span> <span class="syntax-operator">=</span> <span class="syntax-string">"2026 Hackathon Project"</span>,</div>
 <div class="editor-line">    <span class="syntax-field">tech</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Go"</span>, <span class="syntax-string">"Python"</span>, <span class="syntax-string">"C++"</span>, <span class="syntax-string">"SQLite"</span> },</div>
-<div class="editor-line">    <span class="syntax-field">github</span> <span class="syntax-operator">=</span> <span class="syntax-string">"https://github.com/uni-project-group-123/hackathon"</span>,</div>
+<div class="editor-line">    <span class="syntax-field">github</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://github.com/uni-project-group-123/hackathon" target="_blank" class="contact-link">"https://github.com/uni-project-group-123/hackathon"</a></span>,</div>
 <div class="editor-line">    <span class="syntax-field">status</span> <span class="syntax-operator">=</span> <span class="syntax-string">"repo currently private"</span>,</div>
 <div class="editor-line">  },</div>
 <div class="editor-line">}</div>
@@ -72,12 +72,12 @@ const portfolioData = {
 <div class="editor-line"><span class="syntax-comment">-- Get In Touch</span></div>
 <div class="editor-line"><span class="syntax-comment">-- =============================================</span></div>
 <div class="editor-line"></div>
-<div class="editor-line"><span class="syntax-comment">-- Keybinds (press g + key to open)</span></div>
+<div class="editor-line"><span class="syntax-comment">-- Keybinds: press g + key, or click links</span></div>
 <div class="editor-line"></div>
-<div class="editor-line">  <span class="syntax-field keybind" data-key="gx"><span class="keybind-prefix">g</span>x</span> <span class="syntax-operator">=</span> <span class="syntax-string">"https://x.com/_Tr4pGod"</span>      <span class="syntax-comment">-- twitter</span></div>
-<div class="editor-line">  <span class="syntax-field keybind" data-key="gd"><span class="keybind-prefix">g</span>d</span> <span class="syntax-operator">=</span> <span class="syntax-string">"https://discord.com/users/858417911563157505"</span> <span class="syntax-comment">-- discord</span></div>
-<div class="editor-line">  <span class="syntax-field keybind" data-key="gh"><span class="keybind-prefix">g</span>h</span> <span class="syntax-operator">=</span> <span class="syntax-string">"https://github.com/trapgod1"</span>    <span class="syntax-comment">-- github</span></div>
-<div class="editor-line">  <span class="syntax-field">gf</span> <span class="syntax-operator">=</span> <span class="syntax-string">"git.local"</span>      <span class="syntax-comment">-- forgejo (local/vpn only)</span></div>
+<div class="editor-line">  <span class="syntax-field keybind" data-key="gx"><span class="keybind-prefix">g</span>x</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://x.com/_Tr4pGod" target="_blank" class="contact-link">"https://x.com/_Tr4pGod"</a></span> <span class="syntax-comment">-- <a href="https://x.com/_Tr4pGod" target="_blank" class="contact-link">twitter</a></span></div>
+<div class="editor-line">  <span class="syntax-field keybind" data-key="gd"><span class="keybind-prefix">g</span>d</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://discord.com/users/858417911563157505" target="_blank" class="contact-link">"https://discord.com/users/858417911563157505"</a></span> <span class="syntax-comment">-- <a href="https://discord.com/users/858417911563157505" target="_blank" class="contact-link">discord</a></span></div>
+<div class="editor-line">  <span class="syntax-field keybind" data-key="gh"><span class="keybind-prefix">g</span>h</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://github.com/trapgod1" target="_blank" class="contact-link">"https://github.com/trapgod1"</a></span>    <span class="syntax-comment">-- <a href="https://github.com/trapgod1" target="_blank" class="contact-link">github</a></span></div>
+<div class="editor-line">  <span class="syntax-field">forgejo</span> <span class="syntax-operator">=</span> <span class="syntax-string">"git.local"</span>      <span class="syntax-comment">-- local/vpn only</span></div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Feel free to reach out!</span></div>
   `,
@@ -88,23 +88,32 @@ const portfolioData = {
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Hardware</span></div>
 <div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">hardware</span> <span class="syntax-operator">=</span> {</div>
-<div class="editor-line">  <span class="syntax-string">"3x Dell Optiplex 3060 Micro"</span>,</div>
-<div class="editor-line">  <span class="syntax-string">"16GB RAM each"</span>,</div>
-<div class="editor-line">  <span class="syntax-string">"2x 256GB SSD each"</span>,</div>
+<div class="editor-line">  <span class="syntax-string">"3x Dell Optiplex 3060 Micro (Proxmox Cluster)"</span>,</div>
+<div class="editor-line">  <span class="syntax-string">"48GB RAM"</span>,</div>
+<div class="editor-line">  <span class="syntax-string">"1.5TB SSD Storage"</span>,</div>
 <div class="editor-line">}</div>
-<div class="editor-line"></div>
-<div class="editor-line"><span class="syntax-comment">-- Hypervisor</span></div>
-<div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">hypervisor</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Proxmox Cluster"</span> }</div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Services</span></div>
 <div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">services</span> <span class="syntax-operator">=</span> {</div>
-<div class="editor-line">  <span class="syntax-string">"Immich"</span>, <span class="syntax-string">"Technitium"</span>, <span class="syntax-string">"AdGuardHome"</span>, <span class="syntax-string">"Forgejo"</span>,</div>
-<div class="editor-line">  <span class="syntax-string">"Pterodactyl (Wings + Panel)"</span>, <span class="syntax-string">"RSSHub"</span>, <span class="syntax-string">"FreshRSS"</span>,</div>
-<div class="editor-line">  <span class="syntax-string">"UptimeKuma"</span>, <span class="syntax-string">"Grafana"</span>, <span class="syntax-string">"Navidrome"</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Forgejo"</span>,       <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Self-hosted Git — primary code remote"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Technitium"</span>,    <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Authoritative DNS with local zone overrides"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Grafana"</span>,       <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Metrics dashboards pulling from node exporters"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"UptimeKuma"</span>,    <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Service health monitoring across the cluster"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Immich"</span>,        <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Self-hosted Google Photos alternative"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"AdGuard Home"</span>,   <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Network-wide ad/tracker blocking — fallback DNS if Technitium fails"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"FreshRSS"</span>,      <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"RSS/Atom feed aggregator"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Navidrome"</span>,     <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Subsonic-compatible music server"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Pterodactyl"</span>,   <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Game server hosting (Wings + Panel)"</span> <span class="syntax-operator">}</span></div>
+<div class="editor-line">}</div>
+<div class="editor-line"></div>
+<div class="editor-line"><span class="syntax-comment">-- Networking</span></div>
+<div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">networking</span> <span class="syntax-operator">=</span> {</div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Tailscale"</span>, <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Mesh VPN — subnet router exposing 192.168.0.0/24 remotely"</span> <span class="syntax-operator">},</span></div>
+<div class="editor-line">  <span class="syntax-operator">{</span> <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Netbird"</span>,   <span class="syntax-field">desc</span> <span class="syntax-operator">=</span> <span class="syntax-string">"WireGuard-based overlay, secondary remote access"</span> <span class="syntax-operator">}</span></div>
 <div class="editor-line">}</div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-keyword">return</span> {</div>
-<div class="editor-line">  <span class="syntax-field">hardware</span>, <span class="syntax-field">hypervisor</span>, <span class="syntax-field">services</span></div>
+<div class="editor-line">  <span class="syntax-field">hardware</span>, <span class="syntax-field">services</span>, <span class="syntax-field">networking</span></div>
 <div class="editor-line">}</div>
   `
 };
