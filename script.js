@@ -8,10 +8,11 @@ const portfolioData = {
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Personal Information</span></div>
 <div class="editor-line"><span class="syntax-field">M</span>.<span class="syntax-field">about</span> = {</div>
-<div class="editor-line">  <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Trapgod1"</span>,</div>
-<div class="editor-line">  <span class="syntax-field">role</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Full Stack Developer"</span>,</div>
+<div class="editor-line">  <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Ritesh"</span>,</div>
+<div class="editor-line">  <span class="syntax-field">handle</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Trapgod1"</span>,</div>
+<div class="editor-line">  <span class="syntax-field">role</span> <span class="syntax-operator">=</span> <span class="syntax-string">"CS Student | Aspiring DevOps / Infrastructure Engineer"</span>,</div>
 <div class="editor-line">  <span class="syntax-field">location</span> <span class="syntax-operator">=</span> <span class="syntax-string">"London"</span>,</div>
-<div class="editor-line">  <span class="syntax-field">bio</span> <span class="syntax-operator">=</span> <span class="syntax-string">""</span>,</div>
+<div class="editor-line">  <span class="syntax-field">bio</span> <span class="syntax-operator">=</span> <span class="syntax-string">"CS student with hands-on sysadmin experience. Building on self-hosted infrastructure and working towards DevOps and platform engineering."</span>,</div>
 <div class="editor-line">}</div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Areas of Interest</span></div>
@@ -21,6 +22,13 @@ const portfolioData = {
 <div class="editor-line">  <span class="syntax-string">"Open Source"</span>,</div>
 <div class="editor-line">  <span class="syntax-string">"System Design"</span>,</div>
 <div class="editor-line">  <span class="syntax-string">"Performance Optimization"</span>,</div>
+<div class="editor-line">}</div>
+<div class="editor-line"></div>
+<div class="editor-line"><span class="syntax-comment">-- Currently Learning</span></div>
+<div class="editor-line"><span class="syntax-field">M</span>.<span class="syntax-field">learning</span> <span class="syntax-operator">=</span> {</div>
+<div class="editor-line">  <span class="syntax-string">"Terraform"</span>,</div>
+<div class="editor-line">  <span class="syntax-string">"Talos OS"</span>,</div>
+<div class="editor-line">  <span class="syntax-string">"Advanced Kubernetes — GitOps with Flux/ArgoCD"</span>,</div>
 <div class="editor-line">}</div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-keyword">return</span> <span class="syntax-field">M</span></div>
@@ -36,6 +44,12 @@ const portfolioData = {
 <div class="editor-line"><span class="syntax-comment">-- Frameworks & Libraries</span></div>
 <div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">frameworks</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Vite"</span>, <span class="syntax-string">"Vue"</span> }</div>
 <div class="editor-line"></div>
+<div class="editor-line"><span class="syntax-comment">-- Networking</span></div>
+<div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">networking</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Tailscale"</span>, <span class="syntax-string">"Netbird"</span>, <span class="syntax-string">"Nginx"</span>, <span class="syntax-string">"DNS"</span>,}</div>
+<div class="editor-line"></div>
+<div class="editor-line"><span class="syntax-comment">-- AI Tools</span></div>
+<div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">ai_tools</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Ollama"</span>, <span class="syntax-string">"Local LLMs"</span>,}</div>
+<div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Operating Systems</span></div>
 <div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">os</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Linux"</span>, <span class="syntax-string">"Debian"</span>, <span class="syntax-string">"Ubuntu"</span>, <span class="syntax-string">"Arch Linux"</span>, <span class="syntax-string">"Windows 11"</span> }</div>
 <div class="editor-line"></div>
@@ -43,10 +57,10 @@ const portfolioData = {
 <div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">virtualization</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Proxmox"</span> }</div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Tools & Infrastructure</span></div>
-<div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">tools</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Docker"</span>, <span class="syntax-string">"Kubernetes"</span>, <span class="syntax-string">"Git"</span>, <span class="syntax-string">"GitHub"</span>, <span class="syntax-string">"GitLab"</span>, <span class="syntax-string">"Forgejo"</span>, <span class="syntax-string">"Nginx"</span> }</div>
+<div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">tools</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Docker"</span>, <span class="syntax-string">"Kubernetes"</span>, <span class="syntax-string">"Git"</span>, <span class="syntax-string">"GitHub"</span>, <span class="syntax-string">"GitLab"</span>, <span class="syntax-string">"Forgejo"</span> }</div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-keyword">return</span> {</div>
-<div class="editor-line">  <span class="syntax-field">languages</span>, <span class="syntax-field">frameworks</span>, <span class="syntax-field">os</span>, <span class="syntax-field">virtualization</span>, <span class="syntax-field">tools</span></div>
+<div class="editor-line">  <span class="syntax-field">languages</span>, <span class="syntax-field">frameworks</span>, <span class="syntax-field">ai_tools</span>, <span class="syntax-field">networking</span>, <span class="syntax-field">os</span>, <span class="syntax-field">virtualization</span>, <span class="syntax-field">tools</span></div>
 <div class="editor-line">}</div>
   `,
   projects: `
@@ -57,11 +71,11 @@ const portfolioData = {
 <div class="editor-line"><span class="syntax-keyword">local</span> <span class="syntax-field">projects</span> <span class="syntax-operator">=</span> {</div>
 <div class="editor-line"></div>
 <div class="editor-line">  {</div>
-<div class="editor-line">    <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Hackathon"</span>,</div>
-<div class="editor-line">    <span class="syntax-field">description</span> <span class="syntax-operator">=</span> <span class="syntax-string">"2026 Hackathon Project"</span>,</div>
-<div class="editor-line">    <span class="syntax-field">tech</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Go"</span>, <span class="syntax-string">"Python"</span>, <span class="syntax-string">"C++"</span>, <span class="syntax-string">"SQLite"</span> },</div>
+<div class="editor-line">    <span class="syntax-field">name</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Sentinel"</span>,</div>
+<div class="editor-line">    <span class="syntax-field">description</span> <span class="syntax-operator">=</span> <span class="syntax-string">"Campus security system combining NFC card auth, facial recognition and real-time occupancy tracking. Go API backend, Python face verification (YuNet/SFace ONNX models), Arduino NFC reader via RC522."</span>,</div>
+<div class="editor-line">    <span class="syntax-field">tech</span> <span class="syntax-operator">=</span> { <span class="syntax-string">"Go"</span>, <span class="syntax-string">"Python"</span>, <span class="syntax-string">"SQLite"</span>, <span class="syntax-string">"Arduino"</span>, <span class="syntax-string">"C++"</span> },</div>
 <div class="editor-line">    <span class="syntax-field">github</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://github.com/uni-project-group-123/hackathon" target="_blank" class="contact-link">"https://github.com/uni-project-group-123/hackathon"</a></span>,</div>
-<div class="editor-line">    <span class="syntax-field">status</span> <span class="syntax-operator">=</span> <span class="syntax-string">"repo currently private"</span>,</div>
+<div class="editor-line">    <span class="syntax-field">status</span> <span class="syntax-operator">=</span> <span class="syntax-string">"codebase cleanup in progress — public release summer 2026"</span>,</div>
 <div class="editor-line">  },</div>
 <div class="editor-line">}</div>
 <div class="editor-line"></div>
@@ -77,6 +91,7 @@ const portfolioData = {
 <div class="editor-line">  <span class="syntax-field keybind" data-key="gx"><span class="keybind-prefix">g</span>x</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://x.com/_Tr4pGod" target="_blank" class="contact-link">"https://x.com/_Tr4pGod"</a></span> <span class="syntax-comment">-- <a href="https://x.com/_Tr4pGod" target="_blank" class="contact-link">twitter</a></span></div>
 <div class="editor-line">  <span class="syntax-field keybind" data-key="gd"><span class="keybind-prefix">g</span>d</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://discord.com/users/858417911563157505" target="_blank" class="contact-link">"https://discord.com/users/858417911563157505"</a></span> <span class="syntax-comment">-- <a href="https://discord.com/users/858417911563157505" target="_blank" class="contact-link">discord</a></span></div>
 <div class="editor-line">  <span class="syntax-field keybind" data-key="gh"><span class="keybind-prefix">g</span>h</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="https://github.com/trapgod1" target="_blank" class="contact-link">"https://github.com/trapgod1"</a></span>    <span class="syntax-comment">-- <a href="https://github.com/trapgod1" target="_blank" class="contact-link">github</a></span></div>
+<div class="editor-line">  <span class="syntax-field keybind" data-key="ge"><span class="keybind-prefix">g</span>e</span> <span class="syntax-operator">=</span> <span class="syntax-string"><a href="mailto:riteshs@tutamail.com" target="_blank" class="contact-link">"riteshs@tutamail.com"</a></span>  <span class="syntax-comment">-- <a href="mailto:riteshs@tutamail.com" target="_blank" class="contact-link">email</a></span></div>
 <div class="editor-line">  <span class="syntax-field">forgejo</span> <span class="syntax-operator">=</span> <span class="syntax-string">"git.local"</span>      <span class="syntax-comment">-- local/vpn only</span></div>
 <div class="editor-line"></div>
 <div class="editor-line"><span class="syntax-comment">-- Feel free to reach out!</span></div>
@@ -344,6 +359,7 @@ document.addEventListener('keydown', (e) => {
       'h': { url: 'https://github.com/trapgod1', type: 'url' },
       'x': { url: 'https://x.com/_Tr4pGod', type: 'url' },
       'd': { url: 'https://discord.com/users/858417911563157505', type: 'url' },
+      'e': { url: 'riteshs@tutamail.com', type: 'email' },
     };
     
     if (e.key in contactLinks) {
@@ -377,6 +393,7 @@ document.addEventListener('keydown', (e) => {
       'h': 'https://github.com/trapgod1',
       'x': 'https://x.com/_Tr4pGod',
       'd': 'https://discord.com/users/858417911563157505',
+      'e': 'riteshs@tutamail.com',
     };
     
     const keybindKey = 'g' + e.key;
